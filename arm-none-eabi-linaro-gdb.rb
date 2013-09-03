@@ -19,6 +19,7 @@ class ArmNoneEabiLinaroGdb < Formula
         
         "--enable-interwork",
         "--enable-multilib",
+        '--disable-werror',
     ]
 
     mkdir 'build' do
