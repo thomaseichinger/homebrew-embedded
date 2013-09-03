@@ -5,13 +5,11 @@ class ArmNoneEabiLinaroGdb < Formula
   url 'https://launchpad.net/gdb-linaro/7.5/7.5-2012.12/+download/gdb-linaro-7.5-2012.12.tar.bz2'
   sha1 'aba6f78c649e1ea45ca10d8ed2d89f4bcb050353'
 
-  depends_on 'gmp'
-  depends_on 'libmpc'
-  depends_on 'mpfr'
-  depends_on 'arm-none-eabi-binutils'
 
   def install
     target = 'arm-none-eabi'
+
+    ENV['CFLAGS'] = '-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0'
     
     args = [
         "--target=#{target}",
