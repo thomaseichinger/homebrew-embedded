@@ -2,20 +2,15 @@ require 'formula'
 
 class ArmNoneEabiLinaroGcc < Formula
   homepage 'http://www.linaro.org'
-  url 'http://launchpad.net/gcc-linaro/4.8/4.8-2013.08/+download/gcc-linaro-4.8-2013.08.tar.xz'
-  sha1 '987b8be406f103806cabe1372f34e782b6312ff7'
-
-  depends_on 'gmp'
-  depends_on 'libmpc'
-  depends_on 'mpfr'
-  depends_on 'arm-none-eabi-binutils'
+  url 'https://launchpad.net/gcc-arm-embedded/4.7/4.7-2013-q3-update/+download/gcc-arm-none-eabi-4_7-2013q3-20130916-mac.tar.bz2'
+  sha1 'a29eda3d4351bfe47749a242f6faa7cbd630d28b'
 
   def install
     binutils = Formula.factory 'arm-none-eabi-binutils'
 
-    ENV['CC'] = 'llvm-gcc-4.2'
-    ENV['CXX'] = 'llvm-g++-4.2'
-    ENV['LD'] = 'llvm-gcc-4.2'
+    ENV['CC'] = 'llvm-gcc'
+    ENV['CXX'] = 'llvm-g++'
+    ENV['LD'] = 'llvm-gcc'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
     
     target = 'arm-none-eabi'
