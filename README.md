@@ -2,16 +2,23 @@
 
 ## Getting Started ##
 
-	brew tap darconeous/embedded
+Get [Homebrew](http://brew.sh) and check the [dependencies](https://github.com/Homebrew/homebrew/wiki/Installation#requirements).  
+Then add this repo by
+
+	brew tap thomaseichinger/embedded
 
 ### Code Sourcery ARM Toolchain 2008q3 (arm-none-eabi) ###
 
+    brew install arm-2008q3-binutils
 	brew install arm-2008q3-gcc
+    
+### Linaro ###
+
+    brew install arm-none-eabi-binutils
+    brew install arm-none-eabi-linaro-gcc
+    brew install arm-none-eabi-linaro-gdb
 
 ### AVR ###
 
+    brew install avr-binutils
 	brew install avr-gcc
-	brew install avr-gdb
-	brew install avrdude         # For general-purpose AVR programming.
-	brew install dfu-programmer  # For programming AVR USB chips.
-	brew install avarice         # For using GDB.
