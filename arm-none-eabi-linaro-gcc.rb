@@ -2,8 +2,8 @@ require 'formula'
 
 class ArmNoneEabiLinaroGcc < Formula
   homepage 'http://www.linaro.org'
-  url 'https://launchpad.net/gcc-arm-embedded/4.7/4.7-2013-q3-update/+download/gcc-arm-none-eabi-4_7-2013q3-20130916-mac.tar.bz2'
-  sha1 'a29eda3d4351bfe47749a242f6faa7cbd630d28b'
+  url 'https://launchpad.net/gcc-linaro/4.8/4.8-2014.01/+download/gcc-linaro-4.8-2014.01.tar.xz'
+  sha1 '35c36518e256faabe92fa454d6ca7d178c971fb1'
 
   def install
     binutils = Formula.factory 'arm-none-eabi-binutils'
