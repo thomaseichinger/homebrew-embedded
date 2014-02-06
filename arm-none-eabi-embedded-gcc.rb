@@ -1,6 +1,6 @@
 require 'formula'
 
-class ArmNoneEabiLinaroGcc < Formula
+class ArmNoneEabiEmbeddedGcc < Formula
   homepage 'https://launchpad.net/gcc-arm-embedded'
   url 'https://launchpad.net/gcc-arm-embedded/4.8/4.8-2013-q4-major/+download/gcc-arm-none-eabi-4_8-2013q4-20131204-src.tar.bz2'
   sha1 '7e9db2a3fe818c6fd04fae21e083c824c6c7dd12'
