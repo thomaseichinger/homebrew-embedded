@@ -16,9 +16,9 @@ class ArmNoneEabiEmbeddedGcc < Formula
     target = 'arm-none-eabi'
     
     cd "src" do
-      system "find", ". -name '*.tar.*' | xargs -I% tar -xf %"
+      system "find", "find . -name '*.tar.*' | xargs -I% tar -xf %"
       cd "zlib-1.2.5" do 
-        system "patch", "-p1 < ../zlib-1.2.5.patch"
+        system "patch", "patch -p1 < ../zlib-1.2.5.patch"
       end
     end
     
